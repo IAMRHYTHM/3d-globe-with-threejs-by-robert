@@ -13,7 +13,7 @@ export default function getStarfield({ numStars = 500 } = {}) {
 
     return {
       pos: new THREE.Vector3(x, y, z),
-      hue: 0.6, // radius * 0.02 + 0.5
+      hue: radius * 0.02 + 0.5,
       minDist: radius,
     };
   }

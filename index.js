@@ -8,7 +8,7 @@ const h = window.innerHeight;
 const scene = new THREE.Scene();
 scene.fog = new THREE.FogExp2(0x000000, 0.3);
 const camera = new THREE.PerspectiveCamera(75, w / h, 1, 100);
-camera.position.z = 5;
+camera.position.z = 4.5;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(w, h);
 document.body.appendChild(renderer.domElement);
@@ -26,7 +26,7 @@ const edges = new THREE.EdgesGeometry(geometry, 1);
 const line = new THREE.LineSegments(edges, lineMat);
 scene.add(line);
 
-const stars = getStarfield({ numStars: 1000, fog: false });
+const stars = getStarfield({ numStars: 3000, fog: true });
 scene.add(stars);
 
 // check here for more datasets ...
